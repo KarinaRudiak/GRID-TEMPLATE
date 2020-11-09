@@ -21,6 +21,76 @@
 
 @import 'footer';
 
+.about {
+  background-color: $color-gray-light;
+  padding-top: 100px;
+  }
+
+
+.about__conteiner {
+    display: flex;
+    max-width: 1340px;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.about__content {
+  max-width: 936px;
+  max-height: 319,23; 
+}
+
+h2 {
+      display: block;
+      font-size: 2.5em;
+      margin-top: 0;
+      margin-bottom: 56px;
+      font-weight: bold;
+      color: #2d3651;
+      font-family: "Roboto Slab", serif;
+      line-height: 1.2em;
+      letter-spacing: 0.258rem;
+}
+  
+p {
+    letter-spacing: 1px;
+    color: #637588;
+    display: block;
+    position: relative;
+    margin-top: 1em;
+    margin-right: 0px;
+    margin-bottom: 1em;
+    margin-left: 0px;
+    font-size: 1.125rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.46rem;
+}
+
+p:first-of-type {
+  margin-top: -5px;
+}
+
+p:first-of-type::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 2px;
+  height: 200px;
+  background-color: rgba(99, 117, 136, 0.1);
+}
+
+.about__image img {
+  max-width: 100%;
+  max-height: 480px;
+  margin-top: 0px;
+  margin-left: 96px;
+}
+
+
+
+  
+
 
 // /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
