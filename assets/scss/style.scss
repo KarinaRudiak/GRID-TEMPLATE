@@ -108,7 +108,6 @@ input {
   font-size: 100%;
   line-height: 1.15;
   text-rendering: auto;
-  color: -internal-light-dark(black, white);
   letter-spacing: normal;
   word-spacing: normal;
   text-transform: none;
@@ -116,11 +115,6 @@ input {
   text-shadow: none;
   display: inline-block;
   text-align: start;
-  appearance: textfield;
-  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-  cursor: text;
-  margin: 0em;
-  font: 400 13.3333px Arial;
   padding: 1px 2px;
   border-width: 2px;
   border-style: inset;
@@ -159,6 +153,15 @@ input[type="text"] {
 .form .btn-accent:hover {
   background-color: $color-accent;
   border: 1px solid white;
+}
+
+.form-item__input:hover, .form-item__input:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+input:focus {
+  outline: none;
 }
 
 

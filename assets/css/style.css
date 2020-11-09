@@ -896,7 +896,6 @@ input {
   font-size: 100%;
   line-height: 1.15;
   text-rendering: auto;
-  color: -internal-light-dark(black, white);
   letter-spacing: normal;
   word-spacing: normal;
   text-transform: none;
@@ -904,13 +903,6 @@ input {
   text-shadow: none;
   display: inline-block;
   text-align: start;
-  -webkit-appearance: textfield;
-     -moz-appearance: textfield;
-          appearance: textfield;
-  background-color: -internal-light-dark(white, #3b3b3b);
-  cursor: text;
-  margin: 0em;
-  font: 400 13.3333px Arial;
   padding: 1px 2px;
   border-width: 2px;
   border-style: inset;
@@ -951,6 +943,16 @@ input[type="text"] {
 .form .btn-accent:hover {
   background-color: #d66926;
   border: 1px solid white;
+}
+
+.form-item__input:hover, .form-item__input:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+input:focus {
+  outline: none;
 }
 
 @media (min-width: 576px) {
