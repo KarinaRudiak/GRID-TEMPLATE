@@ -24,6 +24,7 @@
 .about {
   background-color: $color-gray-light;
   padding-top: 100px;
+  padding-bottom: 67px;
   }
 
 
@@ -53,7 +54,7 @@ h2 {
 }
   
 p {
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
     color: #637588;
     display: block;
     position: relative;
@@ -95,6 +96,7 @@ p:first-of-type::after {
 .form__container {
   display: grid;
   grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
@@ -124,7 +126,7 @@ input {
 
 
 input[type="text"] {
-  padding: 1px 2px;
+  padding: 1px 31px;
 }
 
 .form-item__input {
@@ -135,7 +137,7 @@ input[type="text"] {
   padding-left: 20px;
   transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.15em;
-  color: #ffffff;
+  color: red;
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
@@ -145,7 +147,6 @@ input[type="text"] {
 .form .btn-accent {
   width: 100%;
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -156,12 +157,12 @@ input[type="text"] {
 }
 
 .form-item__input:hover, .form-item__input:focus {
-  border-color: rgba(255, 255, 255, 0.15);
-  border-bottom-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.15);
+    border-bottom-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
 }
 input:focus {
-  outline: none;
+    outline: none;
 }
 
 
