@@ -29,9 +29,6 @@ h1 {
     @include md {
       font-size: 1.875rem;
     }
-    ;
-    ;
-    ;
 }
 
 a {
@@ -41,7 +38,8 @@ a {
 }
 
 .btn,
-.btn-accent {
+.btn-accent,
+.btn-sub {
     display: block;
   
     transition: background-color 0.5s;
@@ -98,4 +96,46 @@ a {
 .btn:hover,
 .btn-accent:hover {
     background-color: $color-accent;
+}
+
+h2 {
+  display: block;
+  font-size: 2.5em;
+  margin-top: 0;
+  margin-bottom: 56px;
+  font-weight: bold;
+  color: #2d3651;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.2em;
+  letter-spacing: 0.258rem;
+
+  @include lg {
+    margin-bottom: 56px;
+    font-size: 2.5rem;
+  }
+  @include sm {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+input {
+  overflow: visible;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 10px;
+  display: inline-block;
+  text-align: start;
+  padding: 1px 2px;
+  border: 2px inset rgb(118, 118, 118), rgb(133, 133, 133);
+  color: $color-light;
+
+  &:focus {
+    outline: none;
+ }
 }
