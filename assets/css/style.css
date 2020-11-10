@@ -946,7 +946,6 @@ input:focus {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
-  grid-area: b3;
 }
 
 .btn-sub:hover {
@@ -1097,6 +1096,9 @@ input:focus {
     grid-gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
     grid-template-columns: repeat(2, 1fr);
+  }
+  .form__container {
+    grid-template-columns: 3fr 1fr 2fr;
   }
 }
 
