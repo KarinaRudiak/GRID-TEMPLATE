@@ -928,6 +928,13 @@ section {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.form-item__input:hover,
+.form-item__input:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
 .form .btn-accent:hover,
 .form .btn-accent:focus {
   cursor: pointer;
@@ -983,6 +990,12 @@ button, input {
 
 .footer__social .fab {
   font-size: 36px;
+  font-family: "Font Awesome 5 Brands";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
 }
 
 .footer__social::after {
@@ -993,15 +1006,6 @@ button, input {
   height: 2px;
   content: "";
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.fab {
-  font-family: "Font Awesome 5 Brands";
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
 }
 
 .footer__copy span:nth-of-type(1) {
