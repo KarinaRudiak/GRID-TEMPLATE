@@ -1,6 +1,6 @@
 .form {
   padding: 30px 0;
-  background-color: $color-primary;
+  background-color: #2d3651;
 
   &__container {
     display: grid;
@@ -9,17 +9,27 @@
     margin: auto;
     padding-right: 20px;
     padding-left: 20px;
-    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    @include lg {
+    @include lg-min {
       grid-template-columns: repeat(3, 1fr);
     }
-    @include md {
-      grid-template-columns: 1fr;
-      max-width: 100%;
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+    }  
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
     }
     @include sm {
       grid-template-columns: 1fr;
+    }
+  }
+
+  &-item {
+    @include md-sm {
+      &:nth-of-type(1) {
+        grid-column: 1 / span 2;
+      }
     }
   }
 
@@ -31,41 +41,35 @@
     padding-left: 20px;
     transition: background-color 0.5s, border-color 0.5s;
     letter-spacing: 0.15em;
+    color: #ffffff;
     border: 2px solid rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0.25);
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1.125rem;
+  }
 
-    &:nth-of-type(1) {
-      grid-area: b1;
-    }
-    &:nth-of-type(2) {
-      grid-area: b2;
-    }
+  .btn-accent {
+    width: 100%;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 
-.btn-sub {
-  height: 60px;
-  padding: 18px $gap;
-  border: 2px solid $color-primary;
-  background-color: rgba($color-primary, 0.8);
-  width: 100%;
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
-  grid-area: b3;
-
-  &:hover {
-    background-color: $color-accent;
-    border: 1px solid $color-light;
-  }
+.form .btn-accent:hover, 
+.form .btn-accent:focus {
+  cursor: pointer;
+  border-color: #ffffff;
+  background-color: #d66926;
+  transition: background-color 0.5s;
 }
 
-.form-item__input:hover, 
-.form-item__input:focus {
-    border-color: rgba(255, 255, 255, 0.15);
-    border-bottom-color: $color-light;
-    background-color: rgba(255, 255, 255, 0.15);
+button, input {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  text-transform: none;
+  overflow: visible;
 }

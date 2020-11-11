@@ -119,29 +119,6 @@ h2 {
   }
 }
 
-input {
-  overflow: visible;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 10px;
-  display: inline-block;
-  text-align: start;
-  padding: 1px 2px;
-  border: 2px inset rgb(118, 118, 118), rgb(133, 133, 133);
-  color: $color-light;
-
-  &:focus {
-    outline: none;
- }
+section {
+  display: block;
 }
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-  background-color: transparent;
-} 

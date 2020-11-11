@@ -22,6 +22,7 @@
       display: block;
       padding: 10px;
       transition: color 0.5s;
+      background-color: transparent;
     }
 
     .fab {
@@ -58,4 +59,9 @@
 .footer__copy span:nth-of-type(2) {
   color: #e5e5e5;
   font-weight: 700;
+}
+
+.footer__social a:hover, 
+.footer__social a:focus {
+  color: #d66926;
 }
