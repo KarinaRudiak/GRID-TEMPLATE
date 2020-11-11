@@ -46,11 +46,13 @@
     border-bottom-color: rgba(255, 255, 255, 0.25);
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1.125rem;
+    outline: none;
   }
 
   .btn-accent {
     width: 100%;
     color: #ffffff;
+    border-color: rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.1);
   }
@@ -79,3 +81,4 @@ button, input {
   text-transform: none;
   overflow: visible;
 }
+
