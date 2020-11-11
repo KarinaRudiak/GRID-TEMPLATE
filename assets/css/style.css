@@ -559,6 +559,12 @@ input:focus {
   outline: none;
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: transparent;
+}
+
 .header {
   display: grid;
   -ms-flex-line-pack: center;
@@ -914,7 +920,6 @@ input:focus {
   display: grid;
   grid-gap: 20px;
   max-width: 1340px;
-  grid-template-columns: repeat(3, 1fr);
   margin: auto;
   padding-right: 20px;
   padding-left: 20px;
@@ -936,6 +941,14 @@ input:focus {
   font-size: 1.125rem;
 }
 
+.form-item__input:nth-of-type(1) {
+  grid-area: b1;
+}
+
+.form-item__input:nth-of-type(2) {
+  grid-area: b2;
+}
+
 .btn-sub {
   height: 60px;
   padding: 18px 20px;
@@ -946,6 +959,7 @@ input:focus {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
+  grid-area: b3;
 }
 
 .btn-sub:hover {
@@ -958,6 +972,73 @@ input:focus {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #fff;
   background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer {
+  padding: 50px 20px 70px;
+  text-align: center;
+  background-color: #2d3651;
+  display: block;
+}
+
+.footer__container {
+  max-width: 1340px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.footer__social {
+  position: relative;
+  display: grid;
+  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__social a {
+  display: block;
+  padding: 10px;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.footer__social .fab {
+  font-size: 36px;
+}
+
+.footer__social::after {
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 75px / 2);
+  width: 75px;
+  height: 2px;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.footer__copy span:nth-of-type(1) {
+  margin-right: -0.5em;
+  letter-spacing: 0.33em;
+  font-weight: 100;
+}
+
+.footer__copy span:nth-of-type(2) {
+  color: #e5e5e5;
+  font-weight: 700;
 }
 
 @media (min-width: 576px) {
@@ -1089,6 +1170,10 @@ input:focus {
   .skill-item__title {
     font-size: 1.125rem;
   }
+  .form__container {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
@@ -1096,9 +1181,6 @@ input:focus {
     grid-gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
     grid-template-columns: repeat(2, 1fr);
-  }
-  .form__container {
-    grid-template-columns: 3fr 1fr 2fr;
   }
 }
 

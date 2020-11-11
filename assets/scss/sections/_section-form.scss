@@ -6,16 +6,17 @@
     display: grid;
     grid-gap: 20px;
     max-width: 1340px;
-    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     padding-right: 20px;
     padding-left: 20px;
+    // grid-template-columns: repeat(3, 1fr);
 
     @include lg {
       grid-template-columns: repeat(3, 1fr);
     }
-    @include md-sm {
-      grid-template-columns: 3fr 1fr 2fr;
+    @include md {
+      grid-template-columns: 1fr;
+      max-width: 100%;
     }
     @include sm {
       grid-template-columns: 1fr;
@@ -35,7 +36,12 @@
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1.125rem;
 
-    
+    &:nth-of-type(1) {
+      grid-area: b1;
+    }
+    &:nth-of-type(2) {
+      grid-area: b2;
+    }
   }
 }
 
@@ -49,6 +55,7 @@
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
+  grid-area: b3;
 
   &:hover {
     background-color: $color-accent;
