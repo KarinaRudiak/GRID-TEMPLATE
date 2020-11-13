@@ -1010,14 +1010,14 @@ input {
      object-fit: cover;
 }
 
-.post-item__caption {
+.post-item__description {
   display: grid;
   padding: 20px;
   -ms-flex-line-pack: center;
       align-content: center;
 }
 
-.post-item__caption h3 {
+.post-item__description h3 {
   -webkit-transition: color .5s;
   -o-transition: color .5s;
   transition: color .5s;
@@ -1026,7 +1026,7 @@ input {
   color: #637588;
 }
 
-.post-item__caption p {
+.post-item__description p {
   -webkit-transition: color .5s;
   -o-transition: color .5s;
   transition: color .5s;
