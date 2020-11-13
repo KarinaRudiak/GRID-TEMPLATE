@@ -1,129 +1,159 @@
-* {
+*
+{
     box-sizing: border-box;
 }
 
-html {
-    overflow-y: scroll;
-  
-    color: $color-gray;
-  
-    font-family: "Roboto", sans-serif;
+html
+{
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
+
+    overflow-y: scroll;
+
+    color: $color-gray;
 }
 
-h1 {
-    letter-spacing: 0.08em;
-  
-    color: $color-light;
-  
-    font-family: "Roboto Slab", serif;
+h1
+{
+    font-family: 'Roboto Slab', serif;
     font-weight: 300;
     line-height: 1.2;
-  
-    @include lg-min {
-      font-size: 3.75rem;
+
+    letter-spacing: .08em;
+
+    color: $color-light;
+
+    @include lg-min
+    {
+        font-size: 3.75rem;
     }
-    @include lg-md {
-      font-size: 2.5rem;
+    @include lg-md
+    {
+        font-size: 2.5rem;
     }
-    @include md {
-      font-size: 1.875rem;
+    @include md
+    {
+        font-size: 1.875rem;
     }
 }
 
-a {
+a
+{
     text-decoration: none;
-    background-color: transparent;
-  
+
     color: $color-light;
+    background-color: transparent;
 }
 
 .btn,
-.btn-accent {
-    display: block;
-  
-    transition: background-color 0.5s;
-    text-align: center;
-    letter-spacing: 0.1em;
-  
+.btn-accent
+{
     font-size: 1.125rem;
+
+    display: block;
+
+    transition: background-color .5s;
+    text-align: center;
+    letter-spacing: .1em;
 }
 
-.btn {
+.btn
+{
     padding-right: $gap;
     padding-left: $gap;
-  
+
     border: 2px solid $color-light;
-    background-color: rgba($color-light, 0.1);
-  
-    @include lg-min {
-      min-width: 250px;
-      height: 60px;
-      padding-top: 18px;
-      padding-bottom: 18px;
+    background-color: rgba($color-light, .1);
+
+    @include lg-min
+    {
+        min-width: 250px;
+        height: 60px;
+        padding-top: 18px;
+        padding-bottom: 18px;
     }
-    @include lg {
-      min-width: 200px;
-      height: 50px;
-      padding-top: 14px;
-      padding-bottom: 14px;
-  
-      font-size: 1rem;
+    @include lg
+    {
+        font-size: 1rem;
+
+        min-width: 200px;
+        height: 50px;
+        padding-top: 14px;
+        padding-bottom: 14px;
     }
-    @include md {
-      min-width: 170px;
-      height: 40px;
-      padding-top: 9px;
-      padding-bottom: 9px;
+    @include md
+    {
+        min-width: 170px;
+        height: 40px;
+        padding-top: 9px;
+        padding-bottom: 9px;
     }
 }
 
-.btn-accent {
+.btn-accent
+{
     height: 60px;
     padding: 18px $gap;
-  
+
     border: 2px solid $color-primary;
-    background-color: rgba($color-primary, 0.8);
-  
-    @include sm-min {
-      min-width: 350px;
+    background-color: rgba($color-primary, .8);
+
+    @include sm-min
+    {
+        min-width: 350px;
     }
-    @include sm {
-      width: 100%;
+    @include sm
+    {
+        width: 100%;
     }
 }
 
 .btn:hover,
-.btn-accent:hover {
+.btn-accent:hover
+{
     background-color: $color-accent;
 }
 
-h2 {
-  display: block;
-  font-size: 2.5em;
-  margin-top: 0;
-  margin-bottom: 56px;
-  font-weight: bold;
-  color: $color-primary;
-  font-family: "Roboto Slab", serif;
-  line-height: 1.2em;
-  letter-spacing: 0.258rem;
+h2
+{
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.2em;
 
-  @include lg {
+    display: block;
+
+    margin-top: 0;
     margin-bottom: 56px;
-    font-size: 2.5rem;
-  }
-  @include lg-md {
-    margin-bottom: 42px;
-    font-size: 2rem;
-  }
-  @include md-sm {
-    margin-bottom: 36px;
-    font-size: 1.5rem;
-  }
-  @include sm {
-    margin-bottom: 36px;
-    text-align: center;
-    font-size: 1.5rem;
-  }
+
+    letter-spacing: .258rem;
+
+    color: $color-primary;
+
+    @include lg
+    {
+        font-size: 2.5rem;
+
+        margin-bottom: 56px;
+    }
+    @include lg-md
+    {
+        font-size: 2rem;
+
+        margin-bottom: 42px;
+    }
+    @include md-sm
+    {
+        font-size: 1.5rem;
+
+        margin-bottom: 36px;
+    }
+    @include sm
+    {
+        font-size: 1.5rem;
+
+        margin-bottom: 36px;
+
+        text-align: center;
+    }
 }
