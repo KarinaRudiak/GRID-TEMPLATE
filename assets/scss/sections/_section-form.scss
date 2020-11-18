@@ -42,23 +42,19 @@
 
     &-item__input
     {
-        font-size: 1.125rem;
-
         display: block;
-
         width: 100%;
         height: 60px;
-        padding-right: $gap;
-        padding-left: $gap;
-
-        transition: background-color .5s, border-color .5s;
-        letter-spacing: .15em;
-
-        color: $color-light;
+        padding-left: 30px;
+        padding-right: 30px;
+        letter-spacing: 0.15em;
+        font-size: 1.125em;
         border: 2px solid rgba(255, 255, 255, 0);
-        border-bottom-color: rgba(255, 255, 255, .25);
+        border-bottom-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(99, 117, 136, 0.2);
         outline: none;
-        background-color: rgba(255, 255, 255, .05);
+        transition: background-color 0.5s, border-color 0.5s;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.25);
     }
 
     .btn-accent
@@ -78,6 +74,7 @@
     border-color: rgba(255, 255, 255, .15);
     border-bottom-color: $color-light;
     background-color: rgba(255, 255, 255, .15);
+    -webkit-text-fill-color: $color-light;
 }
 
 .form .btn-accent:hover,
@@ -97,10 +94,7 @@ input
     font-size: 100%;
     line-height: 1.15;
 
-    overflow: visible;
-
     margin: 0;
 
     text-transform: none;
 }
-
