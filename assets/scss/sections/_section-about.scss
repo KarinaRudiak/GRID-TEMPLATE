@@ -42,6 +42,7 @@
             grid-template-columns: 1fr;
             grid-gap: 20px;
         }
+
     }
 
     &__text
@@ -49,6 +50,9 @@
         font-family: 'Roboto', sans-serif;
         font-size: 1.125rem;
         line-height: 1.46rem;
+
+        letter-spacing: 1px;
+        color: $color-gray;
 
         position: relative;
 
@@ -82,9 +86,11 @@
 
                 background-color: rgba(99, 117, 136, .1);
 
-                @include lg
-                {
-                    right: -50px;
+                @include lg-md {
+                    right: -20px;
+                }
+                @include md-sm {
+                    right: -10px;
                 }
                 @include sm
                 {
