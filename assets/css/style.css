@@ -709,27 +709,38 @@ h2 {
 
 .skill-item {
   position: relative;
-  display: grid;
   overflow: hidden;
-  padding: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
+  background-color: #2d3651;
 }
 
 .skill-item:hover .skill-item__overlay {
   opacity: 0.95 !important;
 }
 
-.skill-item:hover .skill-item__link {
-  color: #d66926;
-}
-
 .skill-item:hover .skill-item__image {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.skill-item:hover .skill-item__link {
+  color: #d66926;
+}
+
+.skill-item__image {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .skill-item__overlay {
@@ -739,22 +750,6 @@ h2 {
   transition: opacity 0.5s;
   opacity: 0.8;
   background-color: #2d3651;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.skill-item__image {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  background-color: #2d3651;
-  background-position: 50% 50%;
-  background-size: cover;
   position: absolute;
   top: 0;
   right: 0;
@@ -783,11 +778,15 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
   padding: 20px;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .skill-item:nth-of-type(1) {
@@ -1120,7 +1119,10 @@ input {
     margin-right: 20px;
   }
   .skills {
-    padding: 10px 10px 40px;
+    padding: 10px;
+  }
+  .skills__button {
+    margin-bottom: 30px;
   }
 }
 
@@ -1300,6 +1302,12 @@ input {
   .posts__grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'p1 p2' 'p3 p4' 'p5 p6';
+  }
+}
+
+@media (max-height: 640px) {
+  .skills__container {
+    grid-auto-rows: 200px;
   }
 }
 
