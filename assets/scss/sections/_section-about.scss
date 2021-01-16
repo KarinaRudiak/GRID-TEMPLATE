@@ -1,0 +1,99 @@
+.about {
+  @include lg-min {
+    padding-top: $gap * 5;
+    padding-bottom: $gap * 5;
+  }
+  @include lg-md {
+    padding-top: $gap * 4;
+    padding-bottom: $gap * 4;
+  }
+  @include md {
+    padding-top: $gap * 3;
+    padding-bottom: $gap * 3;
+  }
+  letter-spacing: 0.055em;
+
+  background-color: $color-gray-light;
+
+  &__container {
+    display: grid;
+    @extend %container;
+    grid-gap: $gap * 5;
+    grid-template-columns: 1fr 271px;
+    @include lg-md {
+      grid-gap: $gap * 2;
+    }
+    @include md-sm {
+      grid-gap: $gap;
+      grid-template-columns: 1fr 236px;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+      grid-gap: $gap;
+    }
+  }
+
+  &__content {
+    h2 {
+      margin-top: 0;
+      margin-bottom: $gap * 2.8;
+
+      letter-spacing: 0.085em;
+      line-height: 1.2em;
+      color: $color-primary;
+
+      font-size: 2.5rem;
+      @include lg-md {
+        margin-bottom: $gap * 2.1;
+        font-size: 2rem;
+      }
+      @include md-sm {
+        letter-spacing: 0.1em;
+        font-size: 1.5rem;
+        margin-bottom: $gap * 1.8;
+      }
+      @include sm {
+        margin-bottom: $gap * 1.8;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      position: relative;
+
+      &:first-of-type::after {
+        margin-top: -5px;
+        position: absolute;
+        top: 0;
+        right: -($gap * 2.5);
+
+        width: 2px;
+        height: $gap * 10;
+
+        content: "";
+
+        background-color: rgba($color-gray-dark, 0.1);
+        @include lg-md {
+          right: -$gap;
+        }
+        @include md-sm {
+          right: -$gap / 2;
+        }
+      }
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  &__image {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    img {
+      max-width: 100%;
+      max-height: 480px;
+    }
+  }
+}

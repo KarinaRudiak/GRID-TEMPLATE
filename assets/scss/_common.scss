@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: $color-gray;
+
+  font-family: "Roboto", sans-serif;
+  font-size: $font-size;
+}
+
+h1 {
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+  @include md {
+    font-size: 1.875rem;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  color: $color-light;
+}
+
+.btn,
+.btn-accent {
+  display: block;
+
+  padding: 18px $gap;
+
+  transition: background-color 0.5s;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  font-size: 1.125rem;
+}
+
+.btn {
+  padding-right: $gap;
+  padding-left: $gap;
+
+  border: 2px solid $color-light;
+  background-color: rgba($color-light, 0.1);
+
+  @include lg-min {
+    min-width: $gap * 12.5;
+    padding-top: $gap - 2;
+    padding-bottom: $gap - 2;
+  }
+  @include lg {
+    min-width: $gap * 10;
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    font-size: 1rem;
+  }
+  @include md {
+    min-width: 170px;
+    height: $gap * 2;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+
+.btn-accent {
+  height: $gap * 3;
+
+  border: 2px solid $color-primary;
+  background-color: rgba($color-primary, 0.8);
+
+  @include sm-min {
+    min-width: 350px;
+  }
+  @include sm {
+    width: 100%;
+  }
+}
+
+.btn:hover,
+.btn-accent:hover {
+  background-color: $color-accent;
+}
